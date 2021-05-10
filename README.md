@@ -1,5 +1,7 @@
 Laboratorio #3 - Problemas de aplicación usando JS
+
 Objetivos:
+
 Resolver problemas de lógica matemática utilizando Javascript.
 Utilizar controles de flujo, ciclos y demás herramientas básicas del lenguaje Javascript.
 I. Resolver los siguientes problemas. Las cadenas o entradas
