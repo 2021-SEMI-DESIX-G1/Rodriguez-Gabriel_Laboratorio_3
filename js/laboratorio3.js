@@ -30,7 +30,15 @@ function palindromo() {
     }
 }
 function caracter() {
-    var caracteres
+    document.getElementById('resultado').innerHTML = "";
+    const cadena = document.getElementById("caractin").value.trim().split('');
+    const repetidas = {};
+    cadena.forEach(letra => {
+        repetidas[ letra ] = ( repetidas[ letra ] || 0) + 1;
+    });
+    for(let letra in repetidas){
+        document.getElementById('resultado').innerHTML += `${ letra } = ${ repetidas [ letra ] }<br>`;
+    }  
 }
 function bisiesto() {
 
