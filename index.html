@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/estilo.css">
     <title>Laboratorio #3</title>
 </head>
 
@@ -16,15 +15,30 @@
             <h2>1. Palindromo</h2>
             <span>Ingrese un número para verificar si es palíndromo</span><br><br>
             <input id="palinin" type="number" name="palinin" placeholder="012345789" required>
-            <input id="palinboton" type="submit" value="Enviar">
+            <input id="palinboton" type="button" value="Verificar">
         </form>
+        <div>
+            <span>Respuesta</span>
+            <div>
+                <span>Numero ingresado: </span>
+                <input type="number" id="paliningresado" disabled="disabled"> 
+            </div>
+            <div>
+                <span>Numero binario: </span>
+                <input type="number" id="palinbinario" disabled="disabled"> 
+            </div>
+            <div>
+                <span>Verificacion: </span>
+                <input type="text" id="palinveri" disabled="disabled" style="width : 11%;"> 
+            </div>
+        </div>
     </div>
     <div>
         <form id="caractform">
             <h2>2. Caracteres</h2>
             <span>Ingrese una palabra para verificar la cantidad de caracteres</span><br><br>
             <input id="caractin" type="text" name="caractin" placeholder="JavaScript" required>
-            <input id="caractboton" type="submit" value="Enviar">
+            <input id="caractboton" type="button" value="Verificar">
         </form>
     </div>
     <div>
@@ -32,7 +46,7 @@
             <h2>3. Año bisiesto</h2>
             <span>Ingrese un año para verificar si es bisiesto</span><br><br>
             <input id="bisiin" type="number" name="bisiin" placeholder="2021" required>
-            <input id="bisiboton" type="submit" value="Enviar">
+            <input id="bisiboton" type="button" value="Verificar">
         </form>
     </div>
     <div>
@@ -40,7 +54,7 @@
             <h2>4. Sumatoria de numeros primos</h2>
             <span>Ingrese un número para calcular la suma de los numeros primos</span><br><br>
             <input id="primosin" type="number" name="primosin" placeholder="7" required>
-            <input id="primosboton" type="submit" value="Enviar">
+            <input id="primosboton" type="button" value="Verificar">
         </form>
     </div>
     <script src="js/laboratorio3.js"></script>
