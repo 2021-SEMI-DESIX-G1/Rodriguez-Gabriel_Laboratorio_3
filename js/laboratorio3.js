@@ -23,7 +23,7 @@ function palindromo() {
         palinbinario.value = binario;
         palinveri.value = "Si es palindromo de doble base";
     }
-    else{
+    else {
         paliningresado.value = numero;
         palinbinario.value = binario;
         palinveri.value = "No es palindromo de doble base";
@@ -34,18 +34,44 @@ function caracter() {
     const cadena = document.getElementById("caractin").value.trim().split('');
     const repetidas = {};
     cadena.forEach(letra => {
-        repetidas[ letra ] = ( repetidas[ letra ] || 0) + 1;
+        repetidas[letra] = (repetidas[letra] || 0) + 1;
     });
-    for(let letra in repetidas){
-        document.getElementById('resultado').innerHTML += `${ letra } = ${ repetidas [ letra ] }<br>`;
-    }  
+    for (let letra in repetidas) {
+        document.getElementById('resultado').innerHTML += `${letra} = ${repetidas[letra]}<br>`;
+    }
 }
 function bisiesto() {
-
+    var año = parseInt(document.getElementById("bisiin").value);
+    if (año % 4 == 0 && año % 100 != 0 || año % 400 == 0) {
+        bisiresp.value = "es biciesto";
+    }
+    else {
+        bisiresp.value = "no es biciesto";
+    }
 }
 function primos() {
-
+    var numeros = parseInt(document.getElementById("primosin").value);
+    var numerosPrimos = 1;
+    if(numeros >= 1 && numeros <= 1000000) {
+        for (let c = 2; c <= numeros; c++) {
+            if (primo(c)) {
+                numerosPrimos = numerosPrimos + c;
+            }
+        }
+        function primo(numero) {
+            for (var i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return numero !== 1;
+        }
+        primosresp.value = numerosPrimos;
+    }
+    
 }
+//Ejemplo: Dado 7
+//Se debería retornar 18, ya que: 1 + 2 + 3 + 5 + 7 = 18
 
 
 
