@@ -53,6 +53,7 @@ function primos() {
     var numeros = parseInt(document.getElementById("primosin").value);
     var numerosPrimos = 1;
     if(numeros >= 1 && numeros <= 1000000) {
+        document.getElementById('primosval').innerHTML = "";
         for (let c = 2; c <= numeros; c++) {
             if (primo(c)) {
                 numerosPrimos = numerosPrimos + c;
@@ -68,11 +69,7 @@ function primos() {
         }
         primosresp.value = numerosPrimos;
     }
-    
+    else {
+        document.getElementById('primosval').innerHTML = "Ingrese un numero entre 1 - 1000000";
+    }
 }
-//Ejemplo: Dado 7
-//Se debería retornar 18, ya que: 1 + 2 + 3 + 5 + 7 = 18
-
-
-
-
